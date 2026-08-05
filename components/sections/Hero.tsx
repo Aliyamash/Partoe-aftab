@@ -1,25 +1,27 @@
+'use client'
+
 import { Container } from '@/components/ui/Container'
 import { LevelTestButton } from '@/components/level-test/LevelTestProvider'
+import { useLanguage } from '@/components/i18n/LanguageProvider'
+import { content } from '@/data/content'
 import styles from './Hero.module.css'
 
 export function Hero() {
+  const { locale } = useLanguage()
+  const copy = content[locale].hero
   return (
     <section className={styles.hero} id="top">
       <Container className={styles.grid}>
         <div className={styles.content}>
-          <span className={styles.eyebrow}>✦ از اولین کلمه تا یک دنیای تازه</span>
-          <h1>یاد بگیر، حرف بزن،<br/><em>آینده‌ات را بساز.</em></h1>
-          <p>آموزش زبان‌های انگلیسی، آلمانی و کره‌ای با مدرس‌های متخصص، متدهای نوین و مسیری متناسب با هدف واقعی شما.</p>
+          <span className={styles.eyebrow}>{copy.eyebrow}</span>
+          <h1>{copy.title}<br/><em>{copy.accent}</em></h1>
+          <p>{copy.description}</p>
           <div className={styles.actions}>
-            <LevelTestButton className={styles.primary}>شروع تعیین سطح رایگان ←</LevelTestButton>
-            <a href="#programs">مشاهده دوره‌ها</a>
+            <LevelTestButton className={styles.primary}>{copy.primary}</LevelTestButton>
+            <a href="#languages">{copy.secondary}</a>
           </div>
           <div className={styles.trust}>
-            <div><strong>۱۲+</strong><span>سال تجربه آموزشی</span></div>
-            <i/>
-            <div><strong>۳</strong><span>زبان تخصصی</span></div>
-            <i/>
-            <div><strong>۶</strong><span>عضو تیم آموزشی</span></div>
+            {copy.stats.map((stat,index)=><div className={styles.statWrap} key={stat[1]}><div><strong>{stat[0]}</strong><span>{stat[1]}</span></div>{index < copy.stats.length-1 && <i/>}</div>)}
           </div>
         </div>
         <div className={styles.art} role="img" aria-label="تصویرسازی فضای آموزش زبان">

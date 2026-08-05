@@ -2,16 +2,16 @@
 
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react'
 import styles from './LevelTest.module.css'
+import { useLanguage } from '@/components/i18n/LanguageProvider'
+import { content } from '@/data/content'
 
 type LevelTestContextValue = { openLevelTest: () => void }
 const LevelTestContext = createContext<LevelTestContextValue | null>(null)
 
-const questions = [
-  { title: 'هدفت از یادگیری زبان چیه؟', options: ['مکالمه روزمره', 'مهاجرت یا تحصیل', 'آمادگی آزمون', 'رشد شغلی'] },
-  { title: 'الان چقدر می‌تونی صحبت کنی؟', options: ['تازه شروع کردم', 'جمله‌های ساده می‌سازم', 'مکالمه می‌کنم', 'تقریباً روان هستم'] }
-]
-
 export function LevelTestProvider({ children }: { children: ReactNode }) {
+  const { locale } = useLanguage()
+  const copy = content[locale].levelTest
+  const questions = copy.questions.map(([title,options])=>({title,options}))
   const [isOpen, setIsOpen] = useState(false)
   const [step, setStep] = useState(0)
 
@@ -32,11 +32,11 @@ export function LevelTestProvider({ children }: { children: ReactNode }) {
       {isOpen && (
         <div className={styles.overlay} onMouseDown={closeLevelTest}>
           <section className={styles.modal} role="dialog" aria-modal="true" aria-labelledby="level-test-title" onMouseDown={(event) => event.stopPropagation()}>
-            <button className={styles.close} onClick={closeLevelTest} aria-label="بستن تعیین سطح">×</button>
+            <button className={styles.close} onClick={closeLevelTest} aria-label={copy.close}>×</button>
             {step < questions.length ? (
               <>
                 <div className={styles.progress}><span style={{ width: `${((step + 1) / questions.length) * 100}%` }} /></div>
-                <small>مرحله {step + 1} از {questions.length}</small>
+                <small>{copy.stage} {step + 1} {copy.of} {questions.length}</small>
                 <h2 id="level-test-title">{questions[step].title}</h2>
                 <div className={styles.options}>
                   {questions[step].options.map((option) => <button key={option} onClick={() => setStep(step + 1)}>{option}<span>←</span></button>)}
@@ -44,10 +44,10 @@ export function LevelTestProvider({ children }: { children: ReactNode }) {
               </>
             ) : (
               <div className={styles.result}>
-                <span>پیشنهاد پرتو آفتاب برای شما</span>
-                <h2 id="level-test-title">مشاوره و تعیین مسیر اختصاصی</h2>
-                <p>برای مشخص شدن سطح دقیق و انتخاب بهترین کلاس، یک جلسه تعیین سطح رایگان حضوری یا آنلاین رزرو کنید.</p>
-                <a href="tel:03152230045">رزرو تعیین سطح رایگان ←</a>
+                <span>{copy.resultLabel}</span>
+                <h2 id="level-test-title">{copy.resultTitle}</h2>
+                <p>{copy.resultText}</p>
+                <a href="tel:03152230045">{copy.resultAction}</a>
               </div>
             )}
           </section>

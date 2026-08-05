@@ -1,16 +1,24 @@
+'use client'
+
 import { Container } from '@/components/ui/Container'
 import { SectionTitle } from '@/components/ui/SectionTitle'
 import { programs } from '@/data/site'
+import { programsEn } from '@/data/site-en'
+import { useLanguage } from '@/components/i18n/LanguageProvider'
+import { content } from '@/data/content'
 import styles from './Programs.module.css'
 
 export function Programs() {
+  const { locale } = useLanguage()
+  const items = locale === 'fa' ? programs : programsEn
+  const copy = content[locale].programs
   return (
     <section className={styles.section} id="programs">
       <Container>
-        <SectionTitle align="center" eyebrow="مسیر مناسب شما" title="هر هدفی، یک مسیر یادگیری" description="دوره‌ها از سطح مبتدی تا پیشرفته و در قالب کلاس‌های خصوصی، نیمه‌خصوصی و گروهی برگزار می‌شوند." />
+        <SectionTitle align="center" eyebrow={copy.eyebrow} title={copy.title} description={copy.description} />
         <div className={styles.grid}>
-          {programs.map((program,index)=><article className={styles.card} key={program.title}>
-            <div><span dir="ltr">{program.badge}</span><b>۰{index+1}</b></div><h3>{program.title}</h3><p>{program.description}</p><a href="#contact" aria-label={`اطلاعات دوره ${program.title}`}>←</a>
+          {items.map((program,index)=><article className={styles.card} key={program.title}>
+            <div><span dir="ltr">{program.badge}</span><b>0{index+1}</b></div><h3>{program.title}</h3><p>{program.description}</p><a href="#contact" aria-label={`${locale === 'fa' ? 'اطلاعات دوره' : 'Course details'} ${program.title}`}>←</a>
           </article>)}
         </div>
       </Container>

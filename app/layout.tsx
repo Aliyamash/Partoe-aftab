@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { LevelTestProvider } from '@/components/level-test/LevelTestProvider'
+import { LanguageProvider } from '@/components/i18n/LanguageProvider'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -17,5 +18,5 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="fa" dir="rtl"><body><LevelTestProvider>{children}</LevelTestProvider></body></html>
+  return <html lang="fa" dir="rtl"><body><LanguageProvider><LevelTestProvider>{children}</LevelTestProvider></LanguageProvider></body></html>
 }
