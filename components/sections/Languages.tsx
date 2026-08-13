@@ -2,6 +2,7 @@
 
 import { Container } from '@/components/ui/Container'
 import { SectionTitle } from '@/components/ui/SectionTitle'
+import { DirectionalArrow } from '@/components/ui/DirectionalArrow'
 import { useLanguage } from '@/components/i18n/LanguageProvider'
 import { content } from '@/data/content'
 import styles from './Languages.module.css'
@@ -18,7 +19,7 @@ export function Languages() {
             <div className={styles.top}><span>{language.code}</span><b>۰{index+1}</b></div>
             <div className={styles.symbol} dir="ltr">{language.phrase}</div>
             <small dir="ltr">{language.native}</small><h3>{language.name}</h3><p>{language.description}</p>
-            <div className={styles.bottom}><span>{language.levels}</span><a href="#contact">{copy.action}</a></div>
+            <div className={styles.bottom}><span>{language.levels}</span><a href="#contact">{copy.action}<DirectionalArrow locale={locale} /></a></div>
           </article>)}
         </div>
       </Container>

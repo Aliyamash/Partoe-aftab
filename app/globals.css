@@ -1,3 +1,21 @@
+@font-face{
+  font-family:"Vazir";
+  src:url("/fonts/Vazir-Medium.ttf") format("truetype");
+  font-style:normal;
+  font-weight:500;
+  font-display:swap;
+}
+
+@font-face{font-family:"Inter";src:url("/fonts/Inter_28pt-Thin.ttf") format("truetype");font-style:normal;font-weight:100;font-display:swap}
+@font-face{font-family:"Inter";src:url("/fonts/Inter_28pt-ExtraLight.ttf") format("truetype");font-style:normal;font-weight:200;font-display:swap}
+@font-face{font-family:"Inter";src:url("/fonts/Inter_28pt-Light.ttf") format("truetype");font-style:normal;font-weight:300;font-display:swap}
+@font-face{font-family:"Inter";src:url("/fonts/Inter_28pt-Regular.ttf") format("truetype");font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:"Inter";src:url("/fonts/Inter_28pt-Medium.ttf") format("truetype");font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:"Inter";src:url("/fonts/Inter_28pt-SemiBold.ttf") format("truetype");font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:"Inter";src:url("/fonts/Inter_28pt-Bold.ttf") format("truetype");font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:"Inter";src:url("/fonts/Inter_28pt-ExtraBold.ttf") format("truetype");font-style:normal;font-weight:800;font-display:swap}
+@font-face{font-family:"Inter";src:url("/fonts/Inter_28pt-Black.ttf") format("truetype");font-style:normal;font-weight:900;font-display:swap}
+
 :root{
   --navy:#0D1B3D;
   --orange:#FF8A00;
@@ -6,22 +24,60 @@
   --pale:#F2F4F7;
   --ink:#3A4561;
   --peach:#FFE0C2;
+  --page-bg:#FFF3E0;
+  --surface:#FFFFFF;
+  --surface-raised:#FFFFFF;
+  --surface-alt:#F2F4F7;
+  --surface-warm:#FFE0C2;
+  --text:#0D1B3D;
+  --text-muted:#3A4561;
+  --border:rgba(13,27,61,.12);
+  --header-bg:rgba(255,243,224,.9);
+  --overlay:rgba(13,27,61,.82);
   --shadow:0 18px 40px rgba(13,27,61,.12);
+  --font-fa:"Vazir",Tahoma,"Segoe UI",Arial,sans-serif;
+  --font-en:"Inter","Segoe UI",Arial,sans-serif;
+}
+
+html[data-theme="dark"]{
+  --orange:#FF9A26;
+  --cream:#091326;
+  --pale:#162641;
+  --ink:#B9C3D5;
+  --peach:#332A24;
+  --page-bg:#091326;
+  --surface:#111F37;
+  --surface-raised:#172842;
+  --surface-alt:#162641;
+  --surface-warm:#332A24;
+  --text:#F7F4EE;
+  --text-muted:#B9C3D5;
+  --border:rgba(255,255,255,.12);
+  --header-bg:rgba(9,19,38,.9);
+  --overlay:rgba(2,7,17,.88);
+  --shadow:0 20px 48px rgba(0,0,0,.34);
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{margin:0;background:var(--cream);color:var(--navy);font-family:Tahoma,"Segoe UI",Arial,sans-serif;overflow-x:hidden}
+html,body{width:100%;max-width:100%;overflow-x:clip}
+html{scroll-behavior:smooth;scroll-padding-top:90px;color-scheme:light}
+html[data-theme="dark"]{color-scheme:dark}
+body{margin:0;background:var(--page-bg);color:var(--text);font-family:var(--font-fa);overflow-x:clip;transition:background-color .25s ease,color .25s ease}
+html[lang="en"] body{font-family:var(--font-en)}
+[dir="ltr"]{font-family:var(--font-en)}
 button,a{font:inherit}
 button{border:0;cursor:pointer}
 a{color:inherit;text-decoration:none}
+img,svg{max-width:100%}
 p{line-height:1.9}
 ::selection{background:var(--orange);color:var(--navy)}
 .container{width:min(1180px,calc(100% - 40px));margin-inline:auto}
 .skipLink{position:fixed;top:-100px;right:20px;z-index:200;background:var(--navy);color:white;padding:12px 18px;border-radius:10px}.skipLink:focus{top:15px}
-.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}.logo>i{width:38px;height:38px;border-radius:12px;background:var(--orange);display:grid;place-items:center;font-style:normal;font-size:23px;font-weight:900;color:var(--navy)}.logo>span{display:grid}.logo strong{font-size:20px;line-height:1.1}.logo small{font-size:9px;color:var(--ink);margin-top:4px}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}.logoMark{width:48px;height:48px;flex:0 0 48px;background-image:url('/brand/logo-light.webp');background-position:center;background-repeat:no-repeat;background-size:contain;transition:background-image .2s ease}.logoText{display:grid}.logo strong{font-size:20px;line-height:1.1}.logo small{font-size:9px;color:var(--text-muted);margin-top:4px}html[data-theme='dark'] .logoMark{background-image:url('/brand/logo-dark.webp')}
 footer .logo strong{color:white}footer .logo small{color:#bac2d1}
-.sectionTitle{max-width:700px}.sectionTitle>span{display:inline-block;background:var(--peach);border-radius:99px;padding:8px 13px;font-size:11px;font-weight:900}.sectionTitle h2{font-size:clamp(34px,4.5vw,55px);line-height:1.25;letter-spacing:-2px;margin:16px 0}.sectionTitle p{color:var(--ink);font-size:14px;margin:0}.sectionTitle--center{text-align:center;margin-inline:auto}.sectionTitle--light h2{color:white}.sectionTitle--light p{color:#cfd5e1}.sectionTitle--light>span{background:rgba(255,255,255,.1);color:var(--orange)}
+.sectionTitle{max-width:700px}.sectionTitle>span{display:inline-block;background:var(--surface-warm);border-radius:99px;padding:8px 13px;font-size:11px;font-weight:900}.sectionTitle h2{font-size:clamp(34px,4.5vw,55px);line-height:1.25;letter-spacing:-2px;margin:16px 0}.sectionTitle p{color:var(--text-muted);font-size:14px;margin:0}.sectionTitle--center{text-align:center;margin-inline:auto}.sectionTitle--light h2{color:white}.sectionTitle--light p{color:#cfd5e1}.sectionTitle--light>span{background:rgba(255,255,255,.1);color:var(--orange)}
 :focus-visible{outline:3px solid var(--orange);outline-offset:3px}
-@media(max-width:600px){.container{width:min(100% - 30px,560px)}.logo strong{font-size:17px}.logo>i{width:34px;height:34px}.sectionTitle h2{font-size:34px;letter-spacing:-1px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+.reveal-ready{opacity:0;transform:translate3d(0,34px,0);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal-ready.reveal-visible{opacity:1;transform:translate3d(0,0,0)}
+@media(max-width:600px){.container{width:min(100% - 30px,560px)}.logo strong{font-size:17px}.logoMark{width:42px;height:42px;flex-basis:42px}.sectionTitle h2{font-size:34px;letter-spacing:-1px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.reveal-ready{opacity:1!important;transform:none!important}}

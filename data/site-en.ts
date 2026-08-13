@@ -25,13 +25,14 @@ export const programsEn: Program[] = [
   {title:'General English',description:'Beginner to advanced for children, teens and adults',badge:'EN'},
   {title:'German',description:'A focused path for study, work and immigration',badge:'DE'},
   {title:'Korean',description:'Structured language learning with cultural context',badge:'KO'},
+  {title:'Turkish',description:'Practical communication for life, study and connection in Türkiye',badge:'TR'},
   {title:'IELTS & EPT',description:'Exam preparation with a personalized study plan',badge:'EXAM'},
   {title:'Tourism English',description:'Practical communication for travel and tourism',badge:'TRAVEL'},
   {title:'Flexible classes',description:'Private, semi-private and group learning options',badge:'FLEX'}
 ]
 
 export const booksEn: Book[] = [
-  {title:'Family and Friends',audience:'Children and foundation learners',code:'01'},
-  {title:'Teen2Teen',audience:'Teenagers and interactive speaking',code:'02'},
-  {title:'Evolve',audience:'Young adults and adults',code:'03'}
+  {title:'Family and Friends 2',audience:'A visual, story-led course that builds children’s core vocabulary, speaking and foundational English skills.',code:'01',image:'/books/family-and-friends-2.jpg'},
+  {title:'Teen2Teen One',audience:'A lively teen course focused on conversation, vocabulary and using English in real-life situations.',code:'02',image:'/books/teen2teen-one.jpg'},
+  {title:'Evolve 6',audience:'A C1 course for advanced learners focused on fluent communication, critical thinking and real-world English.',code:'03',image:'/books/evolve-6.jpg'}
 ]

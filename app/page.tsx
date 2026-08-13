@@ -10,11 +10,12 @@ import { Teachers } from '@/components/sections/Teachers'
 import { Testimonials } from '@/components/sections/Testimonials'
 import { Faq } from '@/components/sections/Faq'
 import { Contact } from '@/components/sections/Contact'
+import { SkipLink } from '@/components/ui/SkipLink'
 
 export default function HomePage() {
   return (
     <>
-      <a className="skipLink" href="#main-content">رفتن به محتوای اصلی</a>
+      <SkipLink />
       <Header />
       <main id="main-content">
         <Hero />

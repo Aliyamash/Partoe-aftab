@@ -1,5 +1,6 @@
 'use client'
 
+import { Sparkles } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { SectionTitle } from '@/components/ui/SectionTitle'
 import { useLanguage } from '@/components/i18n/LanguageProvider'
@@ -17,7 +18,7 @@ export function Teachers() {
       <SectionTitle eyebrow={copy.eyebrow} title={copy.title} description={copy.description} />
       <div className={styles.grid}>{items.map((teacher,index)=><article key={teacher.name}>
         <div className={styles.avatar} data-tone={index%3}><span>{teacher.initials}</span><i>EN</i></div>
-        <div className={styles.info}><small>{teacher.role}</small><h3>{teacher.name}</h3><p>{teacher.education}</p><div><b>✦</b>{teacher.experience}</div></div>
+        <div className={styles.info}><small>{teacher.role}</small><h3>{teacher.name}</h3><p>{teacher.education}</p><div><b><Sparkles aria-hidden="true" /></b>{teacher.experience}</div></div>
       </article>)}</div>
     </Container></section>
   )

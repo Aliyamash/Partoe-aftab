@@ -16,4 +16,5 @@ export type Book = {
   title: string
   audience: string
   code: string
+  image: string
 }

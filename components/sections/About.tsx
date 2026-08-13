@@ -1,5 +1,6 @@
 'use client'
 
+import { BadgeCheck } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { SectionTitle } from '@/components/ui/SectionTitle'
 import { institute } from '@/data/site'
@@ -28,7 +29,7 @@ export function About() {
           <div className={styles.goals}><h3>{copy.goalsTitle}</h3>{data.goals.map((goal,index)=><div key={goal}><b>{String(index+1).padStart(2,'0')}</b><p>{goal}</p></div>)}</div>
         </div>
         <div className={styles.licenses}>
-          {data.licenses.map(license=><div key={license}><span>✓</span><p><strong>{copy.license}</strong>{license}</p></div>)}
+          {data.licenses.map(license=><div key={license}><span><BadgeCheck aria-hidden="true" /></span><p><strong>{copy.license}</strong>{license}</p></div>)}
         </div>
       </Container>
     </section>

@@ -36,13 +36,14 @@ export const programs: Program[] = [
   { title: 'زبان انگلیسی', description: 'از مبتدی تا پیشرفته برای کودک، نوجوان و بزرگسال', badge: 'EN' },
   { title: 'زبان آلمانی', description: 'مسیر هدفمند برای تحصیل، کار و مهاجرت', badge: 'DE' },
   { title: 'زبان کره‌ای', description: 'یادگیری اصولی زبان و آشنایی با فرهنگ کره', badge: 'KO' },
+  { title: 'زبان ترکی استانبولی', description: 'مکالمه کاربردی برای زندگی، تحصیل و ارتباط در ترکیه', badge: 'TR' },
   { title: 'IELTS و EPT', description: 'دوره‌های تخصصی آزمون با برنامه‌ریزی شخصی', badge: 'EXAM' },
   { title: 'زبان گردشگری', description: 'مکالمه کاربردی برای سفر و صنعت گردشگری', badge: 'TRAVEL' },
   { title: 'کلاس خصوصی و گروهی', description: 'خصوصی، نیمه‌خصوصی و گروهی با زمان‌بندی منعطف', badge: 'FLEX' }
 ]
 
 export const books: Book[] = [
-  { title: 'Family and Friends', audience: 'کودکان و زبان‌آموزان پایه', code: '01' },
-  { title: 'Teen2Teen', audience: 'نوجوانان و مکالمه تعاملی', code: '02' },
-  { title: 'Evolve', audience: 'جوانان و بزرگسالان', code: '03' }
+  { title: 'Family and Friends 2', audience: 'دوره‌ای تصویری و داستان‌محور برای تقویت واژگان، مکالمه و مهارت‌های پایه زبان انگلیسی کودکان.', code: '01', image: '/books/family-and-friends-2.jpg' },
+  { title: 'Teen2Teen One', audience: 'منبعی پویا برای نوجوانان با تمرکز بر مکالمه، واژگان و کاربرد زبان در موقعیت‌های واقعی.', code: '02', image: '/books/teen2teen-one.jpg' },
+  { title: 'Evolve 6', audience: 'سطح C1 برای زبان‌آموزان پیشرفته با تمرکز بر مکالمه روان، تفکر انتقادی و انگلیسی واقعی.', code: '03', image: '/books/evolve-6.jpg' }
 ]
