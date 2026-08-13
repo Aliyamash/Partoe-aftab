@@ -1,9 +1,10 @@
-import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises'
+import { copyFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises'
 import { extname, join, relative, sep } from 'node:path'
 
 const outputDir = join(process.cwd(), 'out')
 const distDir = join(process.cwd(), 'dist')
 const serverDir = join(distDir, 'server')
+const hostingDir = join(distDir, '.openai')
 
 const mimeTypes = {
   '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8',
@@ -24,6 +25,8 @@ async function listFiles(directory) {
 
 await rm(distDir, { recursive: true, force: true })
 await mkdir(serverDir, { recursive: true })
+await mkdir(hostingDir, { recursive: true })
+await copyFile(join(process.cwd(), '.openai', 'hosting.json'), join(hostingDir, 'hosting.json'))
 
 const assets = {}
 for (const file of await listFiles(outputDir)) {
