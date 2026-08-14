@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 import { Menu, Moon, Sun, UserRound, X } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { Logo } from '@/components/ui/Logo'
@@ -15,6 +16,7 @@ const hrefs = ['/','/about','/#languages','/#programs','/#teachers','/#testimoni
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const pathname = usePathname()
   const { locale, toggleLocale } = useLanguage()
   const { theme, toggleTheme } = useTheme()
   const copy = content[locale]
@@ -24,9 +26,12 @@ export function Header() {
   return (
     <header className={styles.header}>
       <Container className={styles.inner}>
-        <a href="/" aria-label={locale === 'fa' ? 'صفحه اصلی پرتو آفتاب' : 'Parto Aftab home'}><Logo /></a>
+        <a className={styles.brand} href="/" aria-label={locale === 'fa' ? 'صفحه اصلی پرتو آفتاب' : 'Parto Aftab home'}><Logo /></a>
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`} aria-label={locale === 'fa' ? 'منوی اصلی' : 'Main navigation'}>
-          {copy.nav.map((label,index) => <a key={hrefs[index]} href={hrefs[index]} onClick={() => setMenuOpen(false)}>{label}</a>)}
+          {copy.nav.map((label,index) => {
+            const active = (hrefs[index] === '/' && pathname === '/') || (hrefs[index] === '/about' && pathname === '/about')
+            return <a className={active ? styles.active : undefined} aria-current={active ? 'page' : undefined} key={hrefs[index]} href={hrefs[index]} onClick={() => setMenuOpen(false)}>{label}</a>
+          })}
         </nav>
         <div className={styles.actions}>
           <button className={styles.theme} onClick={toggleTheme} aria-label={themeLabel} title={themeLabel}>
