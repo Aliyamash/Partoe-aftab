@@ -216,6 +216,9 @@ p {
 html[data-theme="dark"] .logoMark {
   background-image: url("/brand/logo-dark.webp");
 }
+footer .logoMark {
+  background-image: url("/brand/logo-dark.webp");
+}
 footer .logo strong {
   color: white;
 }
