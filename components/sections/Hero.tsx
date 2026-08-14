@@ -1,6 +1,7 @@
 'use client'
 
 import { BadgeCheck, HeartHandshake, Sparkles } from 'lucide-react'
+import Image from 'next/image'
 import { Container } from '@/components/ui/Container'
 import { DirectionalArrow } from '@/components/ui/DirectionalArrow'
 import { LevelTestButton } from '@/components/level-test/LevelTestProvider'
@@ -28,10 +29,14 @@ export function Hero() {
     </Container>
 
     <figure className={styles.photo}>
-      <img
+      <Image
         src="/images/parto-aftab-community.webp"
         alt={locale === 'fa' ? 'زبان‌آموزان و تیم آموزشی مؤسسه زبان پرتو آفتاب' : 'Students and teaching team at Parto Aftab Language Institute'}
-        fetchPriority="high"
+        width={1920}
+        height={1280}
+        sizes="100vw"
+        quality={82}
+        priority
       />
       <figcaption><BadgeCheck aria-hidden="true" />{locale === 'fa' ? 'یک قاب واقعی از خانواده پرتو آفتاب' : 'A real moment from the Parto Aftab community'}</figcaption>
     </figure>

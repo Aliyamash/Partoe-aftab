@@ -32,6 +32,8 @@ export function CommunityGallery({ eyebrow, title, description, items }: Communi
                   alt={item.alt}
                   fill
                   sizes={item.shape === 'wide' ? '(max-width: 680px) 100vw, (max-width: 900px) 100vw, 66vw' : '(max-width: 680px) 100vw, (max-width: 900px) 50vw, 34vw'}
+                  quality={74}
+                  loading="lazy"
                   style={{ objectPosition: item.position ?? 'center' }}
                 />
                 <span className={styles.memoryNumber} aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>

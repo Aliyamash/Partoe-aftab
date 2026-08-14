@@ -30,6 +30,11 @@ export const metadata: Metadata = {
     ],
   },
   twitter: { card: "summary_large_image", images: ["/og.png"] },
+  icons: {
+    icon: [{ url: "/brand/logo-light.webp", type: "image/webp" }],
+    shortcut: "/brand/logo-light.webp",
+    apple: "/brand/logo-light.webp",
+  },
 };
 
 export default function RootLayout({

@@ -46,7 +46,7 @@ export default {async fetch(request){
   if(!asset) asset=assets["/404.html"];
   const status=assets[path]||assets[path.replace(/\\/$/,"")]?200:404;
   const headers={"content-type":asset.type,"x-content-type-options":"nosniff"};
-  if(path.startsWith("/_next/static/")) headers["cache-control"]="public, max-age=31536000, immutable";
+  if(path.startsWith("/_next/static/")||/\.(?:png|jpe?g|webp|svg|ico|woff2?|ttf)$/i.test(path)) headers["cache-control"]="public, max-age=31536000, immutable";
   return new Response(request.method==="HEAD"?null:decode(asset.body),{status,headers});
 }};`
 

@@ -31,6 +31,8 @@ export function InstituteGallery({ eyebrow, title, description, gallery }: Galle
                   alt={item.alt}
                   fill
                   sizes={item.size === 'feature' ? '(max-width: 680px) 100vw, 90vw' : '(max-width: 680px) 100vw, (max-width: 900px) 50vw, 33vw'}
+                  quality={74}
+                  loading="lazy"
                   style={{ objectPosition: item.position ?? 'center' }}
                 />
               </div>
