@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { ArrowUpLeft, Sparkles } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { SectionTitle } from '@/components/ui/SectionTitle'
@@ -18,7 +19,14 @@ export function Teachers() {
       <SectionTitle eyebrow={copy.eyebrow} title={copy.title} description={copy.description} />
       <div className={styles.grid}>{items.map((teacher,index)=><article key={teacher.id}>
         <div className={styles.avatar} data-tone={index%3}>
-          <img src={teacher.image} alt={teacher.name} loading="lazy" />
+          <Image
+            src={teacher.image}
+            alt={teacher.name}
+            fill
+            sizes="(max-width: 540px) calc(100vw - 40px), (max-width: 850px) 50vw, 33vw"
+            quality={72}
+            loading="lazy"
+          />
           <span>{String(index + 1).padStart(2, '0')}</span>
         </div>
         <div className={styles.info}>

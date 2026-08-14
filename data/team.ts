@@ -63,9 +63,8 @@ export const teamMembers: Record<'fa' | 'en', readonly TeamMember[]> = {
       name: 'شقایق فرهمند',
       role: 'مدرس زبان ترکی استانبولی',
       image: '/team/shaghayegh-farahmand.webp',
-      summary: 'عضو دپارتمان زبان ترکی استانبولی پرتو آفتاب؛ اطلاعات تکمیلی درباره سوابق و تخصص‌های آموزشی به‌زودی به این پروفایل افزوده می‌شود.',
-      highlights: ['زبان ترکی استانبولی', 'عضو تیم آموزشی', 'اطلاعات تکمیلی به‌زودی'],
-      pending: true
+      summary: 'مدرس زبان ترکی استانبولی و عضو دپارتمان زبان ترکی مؤسسه پرتو آفتاب؛ همراه زبان‌آموزان در یادگیری کاربردی و تقویت مهارت‌های ارتباطی.',
+      highlights: ['مدرس زبان ترکی استانبولی', 'عضو تیم آموزشی پرتو آفتاب']
     },
     {
       id: 'amir-mohammadi-qomi',
@@ -79,11 +78,10 @@ export const teamMembers: Record<'fa' | 'en', readonly TeamMember[]> = {
     {
       id: 'negar-heydari',
       name: 'نگار حیدری',
-      role: 'عضو تیم آموزشی',
+      role: 'مدرس زبان آلمانی',
       image: '/team/negar-heydari.webp',
-      summary: 'عضو تیم پرتو آفتاب؛ اطلاعات تکمیلی درباره حوزه تدریس، تحصیلات و سوابق حرفه‌ای ایشان به‌زودی به این پروفایل افزوده می‌شود.',
-      highlights: ['عضو تیم پرتو آفتاب', 'اطلاعات تکمیلی به‌زودی'],
-      pending: true
+      summary: 'دانش‌آموخته کارشناسی زبان آلمانی از دانشگاه اصفهان، مسلط به زبان انگلیسی و دارای مدرک TTC؛ از رتبه‌های برتر کنکور ۱۴۰۳ و عضو تیم آموزشی پرتو آفتاب.',
+      highlights: ['کارشناسی زبان آلمانی از دانشگاه اصفهان', 'تسلط کامل بر زبان انگلیسی', 'دارای مدرک TTC', 'رتبه برتر کنکور ۱۴۰۳']
     }
   ],
   en: [
@@ -119,8 +117,8 @@ export const teamMembers: Record<'fa' | 'en', readonly TeamMember[]> = {
     },
     {
       id: 'shaghayegh-farahmand', name: 'Shaghayegh Farahmand', role: 'Turkish Instructor', image: '/team/shaghayegh-farahmand.webp',
-      summary: 'A member of Parto Aftab’s Turkish department. More information about her educational background and teaching expertise will be added soon.',
-      highlights: ['Turkish language', 'Teaching team member', 'More details coming soon'], pending: true
+      summary: 'A Turkish instructor and member of Parto Aftab’s Turkish department, supporting learners through practical language study and communication-focused learning.',
+      highlights: ['Turkish Instructor', 'Parto Aftab teaching team member']
     },
     {
       id: 'amir-mohammadi-qomi', name: 'Amir Mohammad Qomi', role: 'Teaching Team Member', image: '/team/amir-mohammadi-qomi.webp',
@@ -128,9 +126,9 @@ export const teamMembers: Record<'fa' | 'en', readonly TeamMember[]> = {
       highlights: ['Parto Aftab team member', 'More details coming soon'], pending: true
     },
     {
-      id: 'negar-heydari', name: 'Negar Heydari', role: 'Teaching Team Member', image: '/team/negar-heydari.webp',
-      summary: 'A member of the Parto Aftab team. Details about her teaching field, education and professional experience will be added soon.',
-      highlights: ['Parto Aftab team member', 'More details coming soon'], pending: true
+      id: 'negar-heydari', name: 'Negar Heydari', role: 'German Instructor', image: '/team/negar-heydari.webp',
+      summary: 'A German Language graduate of the University of Isfahan, proficient in English and TTC-certified. She was also a top-ranked candidate in Iran’s 2024 national entrance exam.',
+      highlights: ['B.A. in German Language, University of Isfahan', 'Proficient in English', 'TTC certified', 'Top-ranked in the 2024 national entrance exam']
     }
   ]
 }

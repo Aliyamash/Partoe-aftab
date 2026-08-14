@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { BadgeCheck, BookOpenCheck } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
 import { SectionTitle } from '@/components/ui/SectionTitle'
@@ -32,7 +33,14 @@ export function TeamProfiles({ locale }: TeamProfilesProps) {
           {items.map((member, index) => (
             <article className={styles.profile} id={member.id} key={member.id}>
               <figure className={styles.photo}>
-                <img src={member.image} alt={member.name} loading="lazy" />
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  sizes="(max-width: 850px) calc(100vw - 40px), 42vw"
+                  quality={76}
+                  loading="lazy"
+                />
                 <span>{String(index + 1).padStart(2, '0')}</span>
               </figure>
               <div className={styles.copy}>
