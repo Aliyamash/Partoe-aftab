@@ -1,28 +1,40 @@
+import Image from 'next/image'
 import { Container } from '@/components/ui/Container'
 import { SectionTitle } from '@/components/ui/SectionTitle'
-import { ImagePlus } from 'lucide-react'
 import styles from './AboutPage.module.css'
 
 type GalleryProps = {
   eyebrow: string
   title: string
   description: string
-  photoPlaceholder: string
-  gallery: readonly (readonly [string, string])[]
+  gallery: readonly {
+    src: string
+    title: string
+    caption: string
+    alt: string
+    size: 'feature' | 'standard'
+    position?: string
+  }[]
 }
 
-export function InstituteGallery({ eyebrow, title, description, photoPlaceholder, gallery }: GalleryProps) {
+export function InstituteGallery({ eyebrow, title, description, gallery }: GalleryProps) {
   return (
     <section className={styles.gallerySection} aria-labelledby="gallery-title">
       <Container>
         <div id="gallery-title"><SectionTitle eyebrow={eyebrow} title={title} description={description} /></div>
         <div className={styles.gallery}>
-          {gallery.map(([label, caption], index) => (
-            <figure className={styles.photoCard} key={label} data-size={index === 0 ? 'large' : 'small'}>
-              <div className={styles.photoPlaceholder} role="img" aria-label={`${photoPlaceholder}: ${caption}`}>
-                <span aria-hidden="true"><ImagePlus /></span><strong>{photoPlaceholder}</strong>
+          {gallery.map((item) => (
+            <figure className={styles.photoCard} key={item.src} data-size={item.size}>
+              <div className={styles.institutePhoto}>
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes={item.size === 'feature' ? '(max-width: 680px) 100vw, 90vw' : '(max-width: 680px) 100vw, (max-width: 900px) 50vw, 33vw'}
+                  style={{ objectPosition: item.position ?? 'center' }}
+                />
               </div>
-              <figcaption><strong>{label}</strong><span>{caption}</span></figcaption>
+              <figcaption><strong>{item.title}</strong><span>{item.caption}</span></figcaption>
             </figure>
           ))}
         </div>

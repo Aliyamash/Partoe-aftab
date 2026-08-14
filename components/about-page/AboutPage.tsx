@@ -19,7 +19,7 @@ export function AboutPage() {
   return (
     <>
       <AboutHero copy={copy} />
-      <InstituteGallery eyebrow={copy.galleryEyebrow} title={copy.galleryTitle} description={copy.galleryDescription} photoPlaceholder={copy.photoPlaceholder} gallery={copy.gallery} />
+      <InstituteGallery eyebrow={copy.galleryEyebrow} title={copy.galleryTitle} description={copy.galleryDescription} gallery={copy.gallery} />
       <HistoryTimeline eyebrow={copy.historyEyebrow} title={copy.historyTitle} lead={copy.historyLead} paragraphs={data.history} />
       <CommunityGallery eyebrow={copy.memoriesEyebrow} title={copy.memoriesTitle} description={copy.memoriesDescription} items={copy.memories} />
       <MissionGoals copy={copy} mission={data.mission} goals={data.goals} licenses={data.licenses} />

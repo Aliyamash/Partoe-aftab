@@ -13,20 +13,17 @@ export const aboutPageContent = {
     ],
     galleryEyebrow: 'قاب‌هایی از مؤسسه',
     galleryTitle: 'فضایی برای یادگیری، تجربه و رشد',
-    galleryDescription: 'این قاب‌ها برای عکس‌های واقعی مؤسسه آماده شده‌اند و با دریافت تصاویر نهایی جایگزین می‌شوند.',
+    galleryDescription: 'نگاهی نزدیک به فضای واقعی پرتو آفتاب؛ از تدریس تعاملی در کلاس تا جمع‌هایی که با انگیزه، احترام و هدف مشترک کنار هم شکل می‌گیرند.',
     gallery: [
-      ['نمای مؤسسه', 'عکس نمای ورودی یا فضای اصلی مؤسسه'],
-      ['فضای کلاس‌ها', 'عکس یکی از کلاس‌های حضوری پرتو آفتاب'],
-      ['لحظه‌های یادگیری', 'عکس فعالیت کلاسی یا حضور زبان‌آموزان']
+      { src: '/gallery/classroom-in-action.webp', title: 'تدریس تعاملی در قلب کلاس', caption: 'کلاس‌هایی مجهز و گفت‌وگومحور که در آن زبان‌آموز فقط شنونده نیست؛ سؤال می‌پرسد، مشارکت می‌کند و زبان را در عمل به کار می‌گیرد.', alt: 'تدریس تعاملی مدرس پرتو آفتاب در کلاس مجهز نوجوانان', size: 'feature', position: 'center 52%' },
+      { src: '/gallery/classroom-community.webp', title: 'فضایی حرفه‌ای و صمیمی', caption: 'محیطی امن و محترمانه که زبان‌آموزان با آرامش، تمرکز و حس تعلق مسیر یادگیری خود را ادامه می‌دهند.', alt: 'زبان‌آموزان در کنار مدیر مؤسسه زبان پرتو آفتاب', size: 'standard', position: 'center' },
+      { src: '/gallery/advanced-learners.webp', title: 'کلاس‌های هدفمند جوانان', caption: 'ترکیب آموزش اصولی، همراهی مدرس و انگیزه گروهی برای رسیدن به مهارت واقعی در ارتباط و مکالمه.', alt: 'گروه زبان‌آموزان جوان پرتو آفتاب در فضای مؤسسه', size: 'standard', position: 'center' },
+      { src: '/gallery/teen-community.webp', title: 'محیط رشد نوجوانان', caption: 'فضایی پویا برای ساختن اعتمادبه‌نفس، تقویت ارتباط و آماده‌شدن برای فرصت‌های بزرگ‌تر آینده.', alt: 'گروه نوجوانان زبان‌آموز پرتو آفتاب در محیط آموزشی مؤسسه', size: 'standard', position: 'center 46%' }
     ],
-    photoPlaceholder: 'جای عکس',
     memoriesEyebrow: 'زندگی در پرتو آفتاب',
     memoriesTitle: 'گالری تجربه‌ها، سفرها و لحظه‌های مشترک',
     memoriesDescription: 'یادگیری در پرتو آفتاب فقط به کلاس محدود نمی‌شود؛ این قاب‌ها گوشه‌ای از دوستی‌ها، جشن موفقیت‌ها، رویدادهای فرهنگی و تجربه‌های مشترک ما هستند.',
     memories: [
-      { src: '/gallery/classroom-in-action.webp', title: 'کلاسی که با گفت‌وگو زنده است', caption: 'یادگیری واقعی از جایی شروع می‌شود که زبان‌آموز جرئت پرسیدن، فکر کردن و حرف زدن پیدا می‌کند؛ کلاس‌های ما برای همین مشارکت ساخته شده‌اند.', alt: 'تدریس تعاملی مدرس پرتو آفتاب در کلاس نوجوانان', shape: 'wide', position: 'center 48%' },
-      { src: '/gallery/advanced-learners.webp', title: 'یک گروه، یک هدف مشترک', caption: 'پیشرفت وقتی شیرین‌تر می‌شود که کنار هم اتفاق بیفتد؛ جمعی از زبان‌آموزان پرتلاش که هر جلسه یک قدم به تسلط نزدیک‌تر می‌شوند.', alt: 'گروه زبان‌آموزان جوان پرتو آفتاب در کنار مدرس', shape: 'standard', position: 'center' },
-      { src: '/gallery/teen-community.webp', title: 'نسلی آماده برای دیده‌شدن', caption: 'نوجوانانی باانگیزه، کنجکاو و بااعتمادبه‌نفس که زبان را فقط برای امتحان نمی‌آموزند؛ برای ساختن آینده‌شان یاد می‌گیرند.', alt: 'گروه نوجوانان زبان‌آموز پرتو آفتاب در کنار تیم آموزشی', shape: 'wide', position: 'center 44%' },
       { src: '/gallery/graduation-celebration.jpg', title: 'جشن یک قدم بزرگ', caption: 'پایان هر دوره، شروع مسیری تازه است؛ لحظه‌ای برای دیدن نتیجه تلاش‌ها و جشن گرفتن اعتمادبه‌نفسی که قدم‌به‌قدم ساخته شده.', alt: 'زبان‌آموزان فارغ‌التحصیل پرتو آفتاب در کنار مدیر مؤسسه', shape: 'portrait', position: 'center 42%' },
       { src: '/gallery/cycling-fountain.jpg', title: 'مسیرهای تازه، کنار هم', caption: 'یک صبح پرانرژی با دوچرخه، گفت‌وگو و رفاقت؛ تجربه‌ای بیرون از کلاس برای ساختن ارتباط‌هایی که ماندگار می‌شوند.', alt: 'مدرس و زبان‌آموزان پرتو آفتاب با دوچرخه کنار آب‌نما', shape: 'wide', position: 'center' },
       { src: '/gallery/cycling-camp-group.jpg', title: 'یادگیری در حرکت', caption: 'اردوی دوچرخه‌سواری، فرصتی برای کار گروهی، نشاط و تجربه یک روز متفاوت در جمع دوستان پرتو آفتاب.', alt: 'گروه زبان‌آموزان و مدرس‌ها در اردوی دوچرخه‌سواری', shape: 'standard', position: 'center' },
@@ -64,20 +61,17 @@ export const aboutPageContent = {
     ],
     galleryEyebrow: 'Inside our institute',
     galleryTitle: 'A place to learn, experience and grow',
-    galleryDescription: 'These frames are ready for your real institute photography and can be replaced as soon as the final images arrive.',
+    galleryDescription: 'A closer look at everyday life inside Parto Aftab—from interactive teaching to focused, welcoming groups built around motivation, respect and shared goals.',
     gallery: [
-      ['The institute', 'Entrance or main institute space'],
-      ['Our classrooms', 'One of Parto Aftab’s in-person classrooms'],
-      ['Learning moments', 'A class activity or student experience']
+      { src: '/gallery/classroom-in-action.webp', title: 'Interactive teaching in action', caption: 'Equipped, conversation-led classes where learners do more than listen: they ask, participate and use language in practice.', alt: 'A Parto Aftab teacher leading an interactive class in an equipped classroom', size: 'feature', position: 'center 52%' },
+      { src: '/gallery/classroom-community.webp', title: 'Professional, warm and welcoming', caption: 'A respectful and secure environment where learners can focus, feel supported and continue their journey with confidence.', alt: 'Students standing with the director inside Parto Aftab Institute', size: 'standard', position: 'center' },
+      { src: '/gallery/advanced-learners.webp', title: 'Goal-focused classes for young adults', caption: 'Structured teaching, close teacher support and group motivation come together to build genuine communication skills.', alt: 'Young adult learners together inside Parto Aftab Institute', size: 'standard', position: 'center' },
+      { src: '/gallery/teen-community.webp', title: 'A place for teenagers to grow', caption: 'A dynamic setting for confidence, communication and preparation for the greater opportunities ahead.', alt: 'Teenage learners together in the Parto Aftab learning environment', size: 'standard', position: 'center 46%' }
     ],
-    photoPlaceholder: 'Photo space',
     memoriesEyebrow: 'Life at Parto Aftab',
     memoriesTitle: 'A gallery of learning, trips and shared moments',
     memoriesDescription: 'Learning at Parto Aftab goes beyond the classroom. These frames capture friendship, achievement, cultural discovery and the shared experiences that shape our community.',
     memories: [
-      { src: '/gallery/classroom-in-action.webp', title: 'A classroom alive with conversation', caption: 'Real learning begins when students feel confident enough to ask, think and speak. Our classes are designed around that active participation.', alt: 'A Parto Aftab teacher leading an interactive class for teenage learners', shape: 'wide', position: 'center 48%' },
-      { src: '/gallery/advanced-learners.webp', title: 'One group, one shared goal', caption: 'Progress feels better when it happens together—a committed group of learners moving one session closer to real fluency.', alt: 'Young Parto Aftab learners standing with their teacher', shape: 'standard', position: 'center' },
-      { src: '/gallery/teen-community.webp', title: 'A generation ready to be heard', caption: 'Motivated, curious and confident teenagers learning language not only for exams, but for the futures they want to build.', alt: 'Parto Aftab teenage learners together with members of the teaching team', shape: 'wide', position: 'center 44%' },
       { src: '/gallery/graduation-celebration.jpg', title: 'Celebrating a major milestone', caption: 'Every completed course opens a new path—a moment to recognise hard work and celebrate confidence built one step at a time.', alt: 'Parto Aftab graduates standing with the institute director', shape: 'portrait', position: 'center 42%' },
       { src: '/gallery/cycling-fountain.jpg', title: 'New paths, together', caption: 'An energetic morning of cycling, conversation and friendship—an experience beyond the classroom that builds lasting connections.', alt: 'Parto Aftab teacher and learners with bicycles beside a fountain', shape: 'wide', position: 'center' },
       { src: '/gallery/cycling-camp-group.jpg', title: 'Learning in motion', caption: 'Our cycling camp brought teamwork, energy and a refreshingly different day with the Parto Aftab community.', alt: 'Students and teachers together during a cycling camp', shape: 'standard', position: 'center' },
