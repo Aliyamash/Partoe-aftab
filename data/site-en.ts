@@ -1,4 +1,4 @@
-import type { Book, Program, Teacher } from '@/types/site'
+import type { Book, Program } from '@/types/site'
 
 export const instituteEn = {
   name:'Parto Aftab Language Institute', shortName:'Parto Aftab', tagline:'Live the language. Build your world.', established:'October 2024',
@@ -11,15 +11,6 @@ export const instituteEn = {
   goals:['Deliver language education using high standards and current teaching methods.','Create a safe, dynamic and motivating environment for every age group.','Build real communication skills for success in education, career and life.','Continuously improve through innovation, teacher development and up-to-date resources.'],
   licenses:['Licensed by Iran Technical and Vocational Training Organization','Licensed by the Ministry of Education'], phones:['031 5223 0045','0939 937 6890','0996 205 8446'], phoneLinks:['03152230045','09399376890','09962058446'], hours:['8:00 AM — 1:00 PM','1:45 PM — 8:45 PM']
 }
-
-export const teachersEn: Teacher[] = [
-  {name:'Majid Sadeghi',role:'Director & Instructor',education:'M.A. in English Language Teaching, Shahid Beheshti University',experience:'Over 12 years of teaching at leading institutes in Tehran and Zarrin Shahr',initials:'MS'},
-  {name:'Sahar Shahriari',role:'English Instructor',education:'B.A. in English Language Teaching, University of Kashan',experience:'Teaching experience at leading institutes in Isfahan and Zarrin Shahr',initials:'SS'},
-  {name:'Fatemeh Ataei',role:'Teen Education Specialist',education:'B.A. in English Language Teaching, Shahid Ashrafi Esfahani University',experience:'Specialized in contemporary methods for teaching teenagers',initials:'FA'},
-  {name:'Sanaz Mohammadi',role:'Young Learner Specialist',education:'B.A. in English Language Teaching, Najafabad University',experience:'Certified in teaching English to children',initials:'SM'},
-  {name:'Mobina Hosseini',role:'English Instructor',education:'B.A. in English Language Teaching, Najafabad University',experience:'Blended modern methods focused on creativity and innovation',initials:'MH'},
-  {name:'Fatemeh Shabani',role:'Executive Manager',education:'Degrees in Law and Accounting; proficient in English',experience:'Three years of specialized executive experience',initials:'FS'}
-]
 
 export const programsEn: Program[] = [
   {title:'General English',description:'Beginner to advanced for children, teens and adults',badge:'EN'},

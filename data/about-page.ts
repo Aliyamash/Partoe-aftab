@@ -8,7 +8,7 @@ export const aboutPageContent = {
     stats: [
       ['مهر ۱۴۰۳', 'آغاز فعالیت'],
       ['۴ زبان', 'دپارتمان آموزشی'],
-      ['۶ نفر', 'تیم آموزشی'],
+      ['۹ نفر', 'تیم آموزشی و اجرایی'],
       ['۲ مجوز', 'پروانه رسمی']
     ],
     galleryEyebrow: 'قاب‌هایی از مؤسسه',
@@ -56,7 +56,7 @@ export const aboutPageContent = {
     stats: [
       ['Oct. 2024', 'Founded'],
       ['4 languages', 'Departments'],
-      ['6 people', 'Teaching team'],
+      ['9 people', 'Teaching & executive team'],
       ['2 licenses', 'Official permits']
     ],
     galleryEyebrow: 'Inside our institute',
