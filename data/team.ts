@@ -69,7 +69,7 @@ export const teamMembers: Record<'fa' | 'en', readonly TeamMember[]> = {
     },
     {
       id: 'amir-mohammadi-qomi',
-      name: 'امیر محمدی قمی',
+      name: 'امیرمحمد قمی',
       role: 'عضو تیم آموزشی',
       image: '/team/amir-mohammadi-qomi.webp',
       summary: 'عضو تیم پرتو آفتاب؛ اطلاعات تکمیلی درباره حوزه تدریس، تحصیلات و سوابق حرفه‌ای ایشان به‌زودی به این پروفایل افزوده می‌شود.',
@@ -123,7 +123,7 @@ export const teamMembers: Record<'fa' | 'en', readonly TeamMember[]> = {
       highlights: ['Turkish language', 'Teaching team member', 'More details coming soon'], pending: true
     },
     {
-      id: 'amir-mohammadi-qomi', name: 'Amir Mohammadi Qomi', role: 'Teaching Team Member', image: '/team/amir-mohammadi-qomi.webp',
+      id: 'amir-mohammadi-qomi', name: 'Amir Mohammad Qomi', role: 'Teaching Team Member', image: '/team/amir-mohammadi-qomi.webp',
       summary: 'A member of the Parto Aftab team. Details about his teaching field, education and professional experience will be added soon.',
       highlights: ['Parto Aftab team member', 'More details coming soon'], pending: true
     },
