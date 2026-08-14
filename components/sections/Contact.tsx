@@ -9,6 +9,7 @@ import { institute } from '@/data/site'
 import { instituteEn } from '@/data/site-en'
 import styles from './Contact.module.css'
 import { DirectionalArrow } from '@/components/ui/DirectionalArrow'
+import { SocialLinks } from '@/components/ui/SocialLinks'
 
 export function Contact() {
   const { locale } = useLanguage()
@@ -26,6 +27,7 @@ export function Contact() {
         <article><span><Clock3 aria-hidden="true" /></span><div><small>{copy.hours}</small>{data.hours.map(hour=><strong key={hour}>{hour}</strong>)}</div></article>
         <article><span><UsersRound aria-hidden="true" /></span><div><small>{copy.format}</small><strong>{copy.online}</strong><p>{copy.classTypes}</p></div></article>
       </div>
+      <SocialLinks />
     </Container></section>
   )
 }
