@@ -23,7 +23,7 @@ export const programsEn: Program[] = [
 ]
 
 export const booksEn: Book[] = [
-  {title:'Family and Friends 2',audience:'A visual, story-led course that builds children’s core vocabulary, speaking and foundational English skills.',code:'01',image:'/books/family-and-friends-2.jpg'},
+  {title:'Family and Friends 1',audience:'A visual, story-led introduction that builds children’s first vocabulary, simple conversations and core English skills.',code:'01',image:'/books/family-and-friends-1.jpg'},
   {title:'Teen2Teen One',audience:'A lively teen course focused on conversation, vocabulary and using English in real-life situations.',code:'02',image:'/books/teen2teen-one.jpg'},
-  {title:'Evolve 6',audience:'A C1 course for advanced learners focused on fluent communication, critical thinking and real-world English.',code:'03',image:'/books/evolve-6.jpg'}
+  {title:'Evolve 1',audience:'A structured A1 pathway focused on practical speaking, essential vocabulary and English for real-life situations.',code:'03',image:'/books/evolve-1.jpg'}
 ]

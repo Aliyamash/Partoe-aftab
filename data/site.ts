@@ -34,7 +34,7 @@ export const programs: Program[] = [
 ]
 
 export const books: Book[] = [
-  { title: 'Family and Friends 2', audience: 'دوره‌ای تصویری و داستان‌محور برای تقویت واژگان، مکالمه و مهارت‌های پایه زبان انگلیسی کودکان.', code: '01', image: '/books/family-and-friends-2.jpg' },
+  { title: 'Family and Friends 1', audience: 'شروعی تصویری و داستان‌محور برای ساخت واژگان پایه، مکالمه‌های ساده و مهارت‌های اولیه زبان انگلیسی کودکان.', code: '01', image: '/books/family-and-friends-1.jpg' },
   { title: 'Teen2Teen One', audience: 'منبعی پویا برای نوجوانان با تمرکز بر مکالمه، واژگان و کاربرد زبان در موقعیت‌های واقعی.', code: '02', image: '/books/teen2teen-one.jpg' },
-  { title: 'Evolve 6', audience: 'سطح C1 برای زبان‌آموزان پیشرفته با تمرکز بر مکالمه روان، تفکر انتقادی و انگلیسی واقعی.', code: '03', image: '/books/evolve-6.jpg' }
+  { title: 'Evolve 1', audience: 'مسیر سطح A1 برای شروع اصولی زبان انگلیسی با تمرکز بر مکالمه کاربردی، واژگان ضروری و موقعیت‌های واقعی.', code: '03', image: '/books/evolve-1.jpg' }
 ]
