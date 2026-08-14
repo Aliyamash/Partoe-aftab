@@ -1,6 +1,6 @@
 'use client'
 
-import { Camera, ExternalLink, MessagesSquare, Send } from 'lucide-react'
+import { Camera, MessagesSquare, Send } from 'lucide-react'
 import { useLanguage } from '@/components/i18n/LanguageProvider'
 import styles from './SocialLinks.module.css'
 
@@ -9,9 +9,9 @@ type SocialLinksProps = {
 }
 
 const socialLinks = [
-  { id: 'telegram', href: 'https://t.me/parto_aftab_language_academy', icon: Send, handle: '@parto_aftab_language_academy' },
-  { id: 'instagram', href: 'https://instagram.com/partoe_aftab_academy', icon: Camera, handle: '@partoe_aftab_academy' },
-  { id: 'rubika', href: 'https://rubika.ir/partoe_aftab', icon: MessagesSquare, handle: '@partoe_aftab' }
+  { id: 'telegram', href: 'https://t.me/parto_aftab_language_academy', icon: Send },
+  { id: 'instagram', href: 'https://instagram.com/partoe_aftab_academy', icon: Camera },
+  { id: 'rubika', href: 'https://rubika.ir/partoe_aftab', icon: MessagesSquare }
 ] as const
 
 export function SocialLinks({ tone = 'default' }: SocialLinksProps) {
@@ -24,11 +24,10 @@ export function SocialLinks({ tone = 'default' }: SocialLinksProps) {
     <section className={`${styles.socials} ${tone === 'dark' ? styles.dark : ''}`} aria-label={copy.title}>
       <div className={styles.heading}><strong>{copy.title}</strong><span>{copy.subtitle}</span></div>
       <div className={styles.links}>
-        {socialLinks.map(({ id, href, icon: Icon, handle }) => (
-          <a key={id} className={styles.link} data-network={id} href={href} target="_blank" rel="noopener noreferrer" aria-label={`${copy.labels[id]} ${handle}`}>
+        {socialLinks.map(({ id, href, icon: Icon }) => (
+          <a key={id} className={styles.link} data-network={id} href={href} target="_blank" rel="noopener noreferrer" aria-label={copy.labels[id]}>
             <span><Icon aria-hidden="true" /></span>
-            <div><b>{copy.labels[id]}</b><small dir="ltr">{handle}</small></div>
-            <ExternalLink aria-hidden="true" />
+            <b>{copy.labels[id]}</b>
           </a>
         ))}
       </div>
