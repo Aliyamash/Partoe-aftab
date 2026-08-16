@@ -49,7 +49,7 @@ export function LevelTestProvider({ children }: { children: ReactNode }) {
                 <span><BadgeCheck aria-hidden="true" />{copy.resultLabel}</span>
                 <h2 id="level-test-title">{copy.resultTitle}</h2>
                 <p>{copy.resultText}</p>
-                <a href="tel:03152230045">{copy.resultAction}<DirectionalArrow locale={locale} /></a>
+                <a href="tel:031552230945">{copy.resultAction}<DirectionalArrow locale={locale} /></a>
               </div>
             )}
           </section>
