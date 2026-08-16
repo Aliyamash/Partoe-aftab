@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import { Menu, Moon, Sun, UserRound, X } from 'lucide-react'
 import { Container } from '@/components/ui/Container'
@@ -16,6 +16,7 @@ const hrefs = ['/','/about','/#languages','/#programs','/#teachers','/#testimoni
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const headerRef = useRef<HTMLElement>(null)
   const pathname = usePathname()
   const { locale, toggleLocale } = useLanguage()
   const { theme, toggleTheme } = useTheme()
@@ -23,8 +24,31 @@ export function Header() {
   const themeLabel = locale === 'fa'
     ? (theme === 'dark' ? 'فعال‌کردن حالت روشن' : 'فعال‌کردن حالت تاریک')
     : (theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode')
+
+  useEffect(() => {
+    setMenuOpen(false)
+  }, [pathname])
+
+  useEffect(() => {
+    if (!menuOpen) return
+
+    const closeOnOutsidePress = (event: PointerEvent) => {
+      if (!headerRef.current?.contains(event.target as Node)) setMenuOpen(false)
+    }
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setMenuOpen(false)
+    }
+
+    document.addEventListener('pointerdown', closeOnOutsidePress)
+    window.addEventListener('keydown', closeOnEscape)
+    return () => {
+      document.removeEventListener('pointerdown', closeOnOutsidePress)
+      window.removeEventListener('keydown', closeOnEscape)
+    }
+  }, [menuOpen])
+
   return (
-    <header className={styles.header}>
+    <header ref={headerRef} className={styles.header}>
       <Container className={styles.inner}>
         <a className={styles.brand} href="/" aria-label={locale === 'fa' ? 'صفحه اصلی پرتو آفتاب' : 'Parto Aftab home'}><Logo /></a>
         <nav className={`${styles.nav} ${menuOpen ? styles.open : ''}`} aria-label={locale === 'fa' ? 'منوی اصلی' : 'Main navigation'}>
