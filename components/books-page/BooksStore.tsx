@@ -29,7 +29,7 @@ export function BooksStore() {
         <Container>
           <a className={styles.breadcrumb} href="/">{text.breadcrumb}</a>
           <div className={styles.heroGrid}>
-            <div><span className={styles.eyebrow}>{text.eyebrow}</span><h1>{text.title}</h1><p>{text.description}</p><a className={styles.callButton} href="tel:03152230045"><PhoneCall aria-hidden="true" />{text.call}</a></div>
+            <div><span className={styles.eyebrow}>{text.eyebrow}</span><h1>{text.title}</h1><p>{text.description}</p><a className={styles.callButton} href="tel:031552230945"><PhoneCall aria-hidden="true" />{text.call}</a></div>
             <div className={styles.heroIcon} aria-hidden="true"><BookOpen /></div>
           </div>
         </Container>
@@ -41,7 +41,7 @@ export function BooksStore() {
             {items.map((book,index) => <article key={book.title} data-tone={index}>
               <div className={styles.productNumber}><span>PARTO AFTAB COLLECTION</span><b>0{index + 1}</b></div>
               <BookCover image={book.image} title={book.title} tone={index} variant="store" />
-              <div className={styles.productInfo}><span><PackageCheck aria-hidden="true" />{text.available}</span><h3 dir="ltr">{book.title}</h3><p>{book.audience}</p><a href="tel:03152230045">{text.order}<PhoneCall aria-hidden="true" /></a></div>
+              <div className={styles.productInfo}><span><PackageCheck aria-hidden="true" />{text.available}</span><h3 dir="ltr">{book.title}</h3><p>{book.audience}</p><a href="tel:031552230945">{text.order}<PhoneCall aria-hidden="true" /></a></div>
             </article>)}
           </div>
         </Container>

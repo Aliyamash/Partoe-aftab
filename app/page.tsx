@@ -22,9 +22,9 @@ export default function HomePage() {
         <FeatureBar />
         <Languages />
         <About />
+        <Teachers />
         <Programs />
         <Books />
-        <Teachers />
         <Testimonials />
         <Faq />
         <Contact />
