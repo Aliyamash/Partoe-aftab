@@ -9,7 +9,7 @@ export const instituteEn = {
   ],
   mission:'Our mission is to develop capable, creative and confident learners through practical, standardized and high-quality education—so they can communicate, learn, grow and create new opportunities for their future.',
   goals:['Deliver language education using high standards and current teaching methods.','Create a safe, dynamic and motivating environment for every age group.','Build real communication skills for success in education, career and life.','Continuously improve through innovation, teacher development and up-to-date resources.'],
-  licenses:['Licensed by Iran Technical and Vocational Training Organization','Licensed by the Ministry of Education'], phones:['031 5522 30945','0939 937 6890','0996 205 8446'], phoneLinks:['031552230945','09399376890','09962058446'], hours:['8:00 AM — 1:00 PM','1:45 PM — 8:45 PM']
+  licenses:['Licensed by Iran Technical and Vocational Training Organization','Licensed by the Ministry of Education'], phones:['031 5223 0945','0939 937 6890','0996 205 8446'], phoneLinks:['03152230945','09399376890','09962058446'], hours:['8:00 AM — 1:00 PM','1:45 PM — 8:45 PM']
 }
 
 export const programsEn: Program[] = [
