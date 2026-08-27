@@ -14,7 +14,7 @@ const structuredData = {
       description: defaultDescription,
       foundingDate: "2024-10",
       telephone: ["+983152230945", "+989399376890", "+989962058446"],
-      openingHours: ["08:00-13:00", "13:45-20:45"],
+      openingHours: ["08:00-13:00", "15:45-20:45"],
       sameAs: socialProfiles,
       knowsLanguage: ["fa", "en", "de", "ko", "tr"],
       contactPoint: {
@@ -61,4 +61,3 @@ export function StructuredData() {
     />
   );
 }
-
