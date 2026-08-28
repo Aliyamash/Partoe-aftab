@@ -11,14 +11,14 @@ type SocialLinksProps = {
 const socialLinks = [
   { id: 'telegram', href: 'https://t.me/parto_aftab_language_academy', icon: Send },
   { id: 'instagram', href: 'https://instagram.com/partoe_aftab_academy', icon: Camera },
-  { id: 'rubika', href: 'https://rubika.ir/partoe_aftab', icon: MessagesSquare }
+  { id: 'bale', href: 'https://ble.ir/partoe_aftab', icon: MessagesSquare }
 ] as const
 
 export function SocialLinks({ tone = 'default' }: SocialLinksProps) {
   const { locale } = useLanguage()
   const copy = locale === 'fa'
-    ? { title: 'ما را دنبال کنید', subtitle: 'خبرها، رویدادها و حال‌وهوای پرتو آفتاب', labels: { telegram: 'تلگرام', instagram: 'اینستاگرام', rubika: 'روبیکا' } }
-    : { title: 'Follow Parto Aftab', subtitle: 'News, events and life at our institute', labels: { telegram: 'Telegram', instagram: 'Instagram', rubika: 'Rubika' } }
+    ? { title: 'ما را دنبال کنید', subtitle: 'خبرها، رویدادها و حال‌وهوای پرتو آفتاب', labels: { telegram: 'تلگرام', instagram: 'اینستاگرام', bale: 'بله' } }
+    : { title: 'Follow Parto Aftab', subtitle: 'News, events and life at our institute', labels: { telegram: 'Telegram', instagram: 'Instagram', bale: 'Bale' } }
 
   return (
     <section className={`${styles.socials} ${tone === 'dark' ? styles.dark : ''}`} aria-label={copy.title}>

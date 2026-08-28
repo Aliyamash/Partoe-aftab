@@ -56,7 +56,7 @@
 
 .link[data-network="telegram"] > span { background: #e5f5ff; color: #229ed9; }
 .link[data-network="instagram"] > span { background: #fde9f0; color: #d94a78; }
-.link[data-network="rubika"] > span { background: #e8efff; color: #3158c8; }
+.link[data-network="bale"] > span { background: #e6f7f2; color: #149878; }
 .link span svg { width: 17px; height: 17px; }
 .link b { max-width: 100%; font-size: 10px; line-height: 1.4; white-space: nowrap; }
 

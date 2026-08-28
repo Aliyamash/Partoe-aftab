@@ -9,5 +9,5 @@ export const socialProfiles = [
   "https://www.linkedin.com/company/parto-aftab/",
   "https://t.me/parto_aftab_language_academy",
   "https://instagram.com/partoe_aftab_academy",
-  "https://rubika.ir/partoe_aftab",
+  "https://ble.ir/partoe_aftab",
 ];
