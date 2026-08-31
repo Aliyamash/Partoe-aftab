@@ -67,15 +67,6 @@ export const teamMembers: Record<'fa' | 'en', readonly TeamMember[]> = {
       highlights: ['مدرس زبان ترکی استانبولی', 'عضو تیم آموزشی پرتو آفتاب']
     },
     {
-      id: 'amir-mohammadi-qomi',
-      name: 'امیرمحمد قمی',
-      role: 'عضو تیم آموزشی',
-      image: '/team/amir-mohammadi-qomi.webp',
-      summary: 'عضو تیم پرتو آفتاب؛ اطلاعات تکمیلی درباره حوزه تدریس، تحصیلات و سوابق حرفه‌ای ایشان به‌زودی به این پروفایل افزوده می‌شود.',
-      highlights: ['عضو تیم پرتو آفتاب', 'اطلاعات تکمیلی به‌زودی'],
-      pending: true
-    },
-    {
       id: 'negar-heydari',
       name: 'نگار حیدری',
       role: 'مدرس زبان آلمانی',
