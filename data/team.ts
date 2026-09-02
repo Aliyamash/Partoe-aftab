@@ -18,8 +18,6 @@ export const teamMembers: Record<"fa" | "en", readonly TeamMember[]> = {
       summary:
         "مدیر مؤسسه و مدرس زبان انگلیسی با بیش از ۱۲ سال تجربه تدریس در مؤسسات برتر تهران و زرین‌شهر؛ همراه زبان‌آموزان در ساختن مسیری اصولی، هدفمند و ماندگار.",
       highlights: [
-        "کارشناسی ارشد آموزش زبان انگلیسی",
-        "دانشگاه شهید بهشتی تهران",
         "۱۲ سال سابقه تدریس دوره های عمومی و تخصصی",
         "رتبه برتر کنکور زبان انگلیسی ۱۳۹۳",
         "عضویت در مجمع استعدادهای درخشان و سازمان ملی نخبگان ایران",
@@ -105,6 +103,22 @@ export const teamMembers: Record<"fa" | "en", readonly TeamMember[]> = {
     },
 
     {
+      id: "bita-fereydouni",
+      name: "بیتا فریدونی",
+      role: "مدرس زبان کره‌ای",
+      image: "/team/bita-fereydouni.webp",
+      summary:
+        "مدرس زبان کره‌ای و انگلیسی با چندین سال سابقه آموزش زبان‌های خارجی؛ دانش‌آموخته مؤسسه سجونگ اصفهان و مترجم کتاب کمک‌آموزشی Everyday Korean Idiomatic Expressions.",
+      highlights: [
+        "دانش‌آموخته مؤسسه سجونگ اصفهان",
+        "مترجم کتاب کمک‌آموزشی Everyday Korean Idiomatic Expressions",
+        "چندین سال سابقه تدریس زبان‌های خارجی",
+        "دارای مدرک TTC",
+        "مسلط به زبان‌های کره‌ای و انگلیسی",
+      ],
+    },
+
+    {
       id: "fatemeh-shabani",
       name: "فاطمه شعبانی",
       role: "کارشناس امور اجرایی",
@@ -168,8 +182,6 @@ export const teamMembers: Record<"fa" | "en", readonly TeamMember[]> = {
       summary:
         "Institute director and English instructor with over 12 years of teaching experience at leading institutes in Tehran and Zarrin Shahr, guiding learners toward a structured, purposeful, and lasting learning journey.",
       highlights: [
-        "M.A. in English Language Teaching",
-        "Shahid Beheshti University, Tehran",
         "12 years of experience teaching general and specialized English courses",
         "Top-ranked in the 2014 Iranian National English Language Entrance Exam",
         "Member of the Iranian Elites Foundation and the Association of Talented Students",
@@ -251,6 +263,22 @@ export const teamMembers: Record<"fa" | "en", readonly TeamMember[]> = {
         "B.A. in English Language Teaching",
         "Najafabad University",
         "Blended and creativity-focused teaching methods",
+      ],
+    },
+
+    {
+      id: "bita-fereydouni",
+      name: "Bita Fereydouni",
+      role: "Korean Language Instructor",
+      image: "/team/bita-fereydouni.webp",
+      summary:
+        "A Korean and English instructor with several years of experience teaching foreign languages, trained at the King Sejong Institute in Isfahan and translator of the educational book Everyday Korean Idiomatic Expressions.",
+      highlights: [
+        "Graduate of the King Sejong Institute in Isfahan",
+        "Translator of Everyday Korean Idiomatic Expressions",
+        "Several years of foreign-language teaching experience",
+        "TTC certified",
+        "Proficient in Korean and English",
       ],
     },
 
