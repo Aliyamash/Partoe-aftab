@@ -51,11 +51,13 @@ export function Testimonials() {
     let position = 0
     let frame = 0
     let previousTime = performance.now()
-    const resizeObserver = new ResizeObserver(() => {
+    const updateGroupWidth = () => {
       groupWidth = firstGroup.getBoundingClientRect().width
       if (groupWidth && position >= groupWidth) position %= groupWidth
-    })
-    resizeObserver.observe(firstGroup)
+    }
+    const resizeObserver = 'ResizeObserver' in window ? new ResizeObserver(updateGroupWidth) : null
+    if (resizeObserver) resizeObserver.observe(firstGroup)
+    else window.addEventListener('resize', updateGroupWidth)
     viewport.scrollLeft = 0
 
     const move = (time: number) => {
@@ -72,7 +74,8 @@ export function Testimonials() {
 
     return () => {
       window.cancelAnimationFrame(frame)
-      resizeObserver.disconnect()
+      resizeObserver?.disconnect()
+      window.removeEventListener('resize', updateGroupWidth)
     }
   }, [locale])
 
