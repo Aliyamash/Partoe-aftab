@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   creator: siteName,
   publisher: siteName,
   category: "education",
+  other: {
+    enamad: "73016919",
+  },
   keywords: [
     "مؤسسه زبان پرتو آفتاب",
     "آموزش زبان انگلیسی",
